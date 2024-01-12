@@ -139,7 +139,7 @@ init:
 	movh	$1, 0x30
 	bsr	memset
 #APP
-;# 98 "source/main.c" 1
+;# 99 "source/main.c" 1
 	jmp vectors_exceptions
 
 ;# 0 "" 2
@@ -165,22 +165,22 @@ init:
 	.string	"[BOB] set max clock\n"
 	.p2align 2
 .LC5:
-	.string	"[BOB] test test stuff\n"
+	.string	"[BOB] Launch Alice Linux Loader\n"
 	.p2align 2
 .LC6:
-	.string	"[BOB] all tests done\n"
+	.string	"[BOB] Done\n"
 	.text
 	.core
 	.p2align 1
 	.globl test
 	.type	test, @function
 test:
-	# frame: 16   16 regs
-	add	$sp, -16
+	# frame: 32   16 regs   12 args
+	add	$sp, -32
 	ldc	$11, $lp
 	movu	$1, .LC1
-	sw	$11, ($sp)
-	sw	$5, 4($sp)
+	sw	$11, 16($sp)
+	sw	$5, 20($sp)
 	bsr	debug_printFormat
 	mov	$1, 1
 	bsr	set_dbg_mode
@@ -218,12 +218,22 @@ test:
 	sw	$2, ($3)
 	movu	$1, .LC5
 	bsr	debug_printFormat
-	bsr	rpc_loop
+	mov	$3, 1
+	sw	$3, 8($sp)
+	sw	$3, 4($sp)
+	movh	$1, 0x1c10
+	mov	$3, 0
+	sw	$3, ($sp)
+	mov	$4, 1
+	mov	$3, 7
+	mov	$2, 1
+	or3	$1, $1, 0x4000
+	bsr	alice_loadAlice
 	movu	$1, .LC6
 	bsr	debug_printFormat
-	lw	$5, 4($sp)
-	lw	$11, ($sp)
-	add	$sp, 16
+	lw	$5, 20($sp)
+	lw	$11, 16($sp)
+	add3	$sp, $sp, 32
 	jmp	$11
 	.size	test, .-test
 	.ident	"GCC: (WTF TEAM MOLECULE IS AT IT AGAIN?!) 6.3.0"

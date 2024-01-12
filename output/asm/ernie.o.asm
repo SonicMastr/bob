@@ -11,42 +11,12 @@ g_ernie_comms:
 	.type	ernie_3auth_B_key1, @object
 	.size	ernie_3auth_B_key1, 16
 ernie_3auth_B_key1:
-	.byte	-69
-	.byte	100
-	.byte	71
-	.byte	33
-	.byte	-53
-	.byte	76
-	.byte	85
-	.byte	7
-	.byte	46
-	.byte	-125
-	.byte	23
-	.byte	123
-	.byte	-21
-	.byte	59
-	.byte	-66
-	.byte	-23
+	.zero	16
 	.p2align 2
 	.type	ernie_3auth_B_data1, @object
 	.size	ernie_3auth_B_data1, 16
 ernie_3auth_B_data1:
-	.byte	-49
-	.byte	46
-	.byte	-109
-	.byte	-23
-	.byte	-7
-	.byte	78
-	.byte	40
-	.byte	-52
-	.byte	-92
-	.byte	-128
-	.byte	38
-	.byte	19
-	.byte	76
-	.byte	124
-	.byte	119
-	.byte	-50
+	.zero	16
 	.text
 	.core
 	.p2align 1

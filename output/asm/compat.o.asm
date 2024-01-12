@@ -4,22 +4,7 @@
 	.type	skso_iv, @object
 	.size	skso_iv, 16
 skso_iv:
-	.byte	-95
-	.byte	50
-	.byte	90
-	.byte	-40
-	.byte	-71
-	.byte	33
-	.byte	47
-	.byte	-17
-	.byte	114
-	.byte	22
-	.byte	-17
-	.byte	-5
-	.byte	48
-	.byte	-53
-	.byte	77
-	.byte	-4
+	.zero	16
 	.section .farbss,"aw"
 	.p2align 2
 	.type	compat_state,@object
@@ -251,14 +236,14 @@ compat_IRQ7_armPanic:
 	sw	$11, 4($sp)
 	bsr	cbus_write
 #APP
-;# 91 "source/compat.c" 1
+;# 85 "source/compat.c" 1
 	mov $0, $0
 
 ;# 0 "" 2
 #NO_APP
 	syncm
 #APP
-;# 93 "source/compat.c" 1
+;# 87 "source/compat.c" 1
 	mov $0, $0
 
 ;# 0 "" 2
@@ -301,7 +286,7 @@ compat_IRQ7_forceExitSm:
 	sw	$2, %lo(compat_state)($3)
 	bsr	compat_Cry2Arm0
 #APP
-;# 112 "source/compat.c" 1
+;# 106 "source/compat.c" 1
 	jmp vectors_exceptions
 
 ;# 0 "" 2

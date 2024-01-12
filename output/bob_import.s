@@ -1,6 +1,6 @@
 .global setup_ints
 setup_ints:
-jmp 0x00042832
+jmp 0x0004284a
 
 .global gpio_port_read
 gpio_port_read:
@@ -20,7 +20,7 @@ jmp 0x000415f8
 
 .global sm_loadstart
 sm_loadstart:
-jmp 0x00042560
+jmp 0x00042578
 
 .global alice_schedule_task
 alice_schedule_task:
@@ -32,7 +32,7 @@ jmp 0x0004098e
 
 .global uart_printn
 uart_printn:
-jmp 0x0004271c
+jmp 0x00042734
 
 .global c_IRQ
 c_IRQ:
@@ -48,19 +48,19 @@ jmp 0x00040fd0
 
 .global spi_write_start
 spi_write_start:
-jmp 0x000425c4
+jmp 0x000425dc
 
 .global pervasive_control_clock
 pervasive_control_clock:
-jmp 0x0004210c
+jmp 0x00042124
 
 .global uart_write
 uart_write:
-jmp 0x000426ce
+jmp 0x000426e6
 
 .global set_dbg_mode
 set_dbg_mode:
-jmp 0x000427dc
+jmp 0x000427f4
 
 .global memcpy
 memcpy:
@@ -72,7 +72,7 @@ jmp 0x00041cde
 
 .global uart_print
 uart_print:
-jmp 0x000426ea
+jmp 0x00042702
 
 .global c_ARM_REQ
 c_ARM_REQ:
@@ -92,7 +92,7 @@ jmp 0x000411d2
 
 .global spi_init
 spi_init:
-jmp 0x00042562
+jmp 0x0004257a
 
 .global PANIC
 PANIC:
@@ -100,7 +100,7 @@ jmp 0x00041628
 
 .global pervasive_control_misc
 pervasive_control_misc:
-jmp 0x00042130
+jmp 0x00042148
 
 .global readAs
 readAs:
@@ -124,7 +124,7 @@ jmp 0x00040ffa
 
 .global enable_icache
 enable_icache:
-jmp 0x00042800
+jmp 0x00042818
 
 .global debug_printFormat
 debug_printFormat:
@@ -152,7 +152,7 @@ jmp 0x000404d4
 
 .global pervasive_control_reset
 pervasive_control_reset:
-jmp 0x00042084
+jmp 0x0004209c
 
 .global glitch_test
 glitch_test:
@@ -164,7 +164,7 @@ jmp 0x000415c8
 
 .global uart_init
 uart_init:
-jmp 0x0004263e
+jmp 0x00042656
 
 .global ernie_read
 ernie_read:
@@ -176,7 +176,7 @@ jmp 0x00041fec
 
 .global pervasive_control_gate
 pervasive_control_gate:
-jmp 0x000420c8
+jmp 0x000420e0
 
 .global i2c_transfer_read
 i2c_transfer_read:
@@ -196,7 +196,7 @@ jmp 0x000418ac
 
 .global spi_read
 spi_read:
-jmp 0x0004261c
+jmp 0x00042634
 
 .global ernie_exec_cmd_short
 ernie_exec_cmd_short:
@@ -204,7 +204,7 @@ jmp 0x00041264
 
 .global cbus_write
 cbus_write:
-jmp 0x000427ac
+jmp 0x000427c4
 
 .global glitch_init
 glitch_init:
@@ -212,7 +212,7 @@ jmp 0x0004172e
 
 .global spi_read_end
 spi_read_end:
-jmp 0x00042628
+jmp 0x00042640
 
 .global memcmp
 memcmp:
@@ -256,7 +256,7 @@ jmp 0x0004051c
 
 .global get_build_timestamp
 get_build_timestamp:
-jmp 0x000427f6
+jmp 0x0004280e
 
 .global gpio_acquire_intr
 gpio_acquire_intr:
@@ -268,11 +268,11 @@ jmp 0x00041df2
 
 .global delay
 delay:
-jmp 0x00042758
+jmp 0x00042770
 
 .global rpc_loop
 rpc_loop:
-jmp 0x00042150
+jmp 0x00042168
 
 .global jig_update_shared_buffer
 jig_update_shared_buffer:
@@ -284,7 +284,7 @@ jmp 0x00041eaa
 
 .global cbus_read
 cbus_read:
-jmp 0x00042784
+jmp 0x0004279c
 
 .global keyring_slot_prot
 keyring_slot_prot:
@@ -292,11 +292,11 @@ jmp 0x00041e84
 
 .global spi_write_end
 spi_write_end:
-jmp 0x000425e4
+jmp 0x000425fc
 
 .global spi_write
 spi_write:
-jmp 0x00042600
+jmp 0x00042618
 
 .global ernie_write
 ernie_write:
@@ -312,7 +312,7 @@ jmp 0x00040fb2
 
 .global spi_read_available
 spi_read_available:
-jmp 0x0004260e
+jmp 0x00042626
 
 .global gpio_port_clear
 gpio_port_clear:

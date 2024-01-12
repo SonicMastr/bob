@@ -68,7 +68,7 @@ glitch_init:
 	mov	$1, 0
 	bsr	gpio_init
 	movu	$2, 65562
-	mov	$1, 0
+	mov	$1, 1
 	bsr	uart_init
 	mov	$5, 256 # 0x100
 .L5:

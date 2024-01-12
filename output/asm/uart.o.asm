@@ -5,7 +5,7 @@
 	.type	g_uart_bus, @object
 	.size	g_uart_bus, 4
 g_uart_bus:
-	.zero	4
+	.long	1
 	.text
 	.core
 	.p2align 1

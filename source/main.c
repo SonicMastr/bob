@@ -1,5 +1,6 @@
 #include "include/types.h"
 
+#include "include/alice.h"
 #include "include/defs.h"
 #include "include/uart.h"
 #include "include/maika.h"
@@ -118,9 +119,11 @@ void test(void) {
     printf("[BOB] set max clock\n");
     vp 0xe3103040 = 0x10007;
 
-    printf("[BOB] test test stuff\n");
+    printf("[BOB] Launch Alice Linux Loader\n");
 
-    rpc_loop();
+    alice_loadAlice((void*)(0x1c000000 + 0x00104000), true, 0x7, true, false, true, true);
 
-    printf("[BOB] all tests done\n");
+    //rpc_loop();
+
+    printf("[BOB] Done\n");
 }
